@@ -3,117 +3,261 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* ========== RESET ========== */
+body { margin:0; padding:0; }
+table { border-collapse:collapse; }
+img { display:block; border:0; }
+
+/* ========== RESPONSIVE ========== */
+@media only screen and (max-width: 600px) {
+
+  .container { width:100% !important; }
+
+  .stack-column,
+  .stack-column td {
+    display:block !important;
+    width:100% !important;
+  }
+
+  .mobile-text-large {
+    font-size:22px !important;
+  }
+
+  .mobile-text {
+    font-size:16px !important;
+  }
+
+  .mobile-padding {
+    padding:20px !important;
+  }
+
+}
+
+/* ========== BUTTON HOVER ========== */
+.button:hover {
+  background-color:#1b5e20 !important;
+  letter-spacing:1px;
+  transition:0.3s ease;
+}
+
+/* ========== KEYFRAME ANIMATION (background slide) ========== */
+@keyframes slideBackground {
+  0% { background-position: left center; }
+  50% { background-position: right center; }
+  100% { background-position: left center; }
+}
+
+.animated-bg {
+  animation: slideBackground 8s infinite alternate;
+}
+
+/* ========== CHECKBOX INTERACTIVITY ========== */
+#toggle-details {
+  display:none;
+}
+
+#toggle-details:checked ~ .extra-content {
+  display:block !important;
+  max-height:500px !important;
+}
+
+.extra-content {
+  display:none;
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.5s ease;
+}
+
+/* ========== RADIO TABS ========== */
+input[type="radio"] {
+  display:none;
+}
+
+.tab-content {
+  display:none;
+}
+
+#tab1:checked ~ .content1,
+#tab2:checked ~ .content2 {
+  display:block;
+}
+
+.tab-label {
+  padding:10px 15px;
+  background:#eeeeee;
+  cursor:pointer;
+  font-family:Arial, sans-serif;
+  font-size:14px;
+  margin-right:5px;
+}
+
+.tab-label:hover {
+  background:#cccccc;
+}
+
+</style>
+
 <title>Central Park Picnic Day</title>
 </head>
 
-<body style="margin:0; padding:0; background-color:#f4f4f4;">
+<body style="background-color:#f4f4f4; font-family:Arial, sans-serif;">
 
+<table width="100%" bgcolor="#f4f4f4" align="center">
+<tr>
+<td align="center">
 
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f4f4f4;">
-  <tr>
-    <td align="center">
+<table class="container" width="600" bgcolor="#ffffff" style="max-width:600px;">
 
-      
-      <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff; max-width:600px;">
+<!-- HEADER -->
+<tr>
+<td align="center" style="padding:30px 20px;">
+<h1 class="mobile-text-large" style="margin:0; font-size:26px;">
+Central Park Picnic Day
+</h1>
+<p class="mobile-text" style="color:#777777;">
+Join us for food, drinks, and live music!
+</p>
+</td>
+</tr>
 
-        
-        <tr>
-          <td align="center" style="padding:30px 20px 10px 20px;">
-            <h1 style="margin:0; font-family:Arial, sans-serif; color:#333333; font-size:26px;">
-              Central Park Picnic Day
-            </h1>
-            <p style="margin-top:10px; font-family:Arial, sans-serif; color:#777777; font-size:14px;">
-              Join us this evening for food, drinks, and a live concert at Field #3!
-            </p>
-          </td>
-        </tr>
+<!-- HERO IMAGE -->
+<tr>
+<td>
+<img src="https://santaclarita.gov/parks-division/wp-content/uploads/sites/19/2023/06/Central-Park-1024x768.jpeg"
+width="600" style="width:100%; height:auto;">
+</td>
+</tr>
 
-        
-        <tr>
-          <td align="center">
-            <img 
-              src="https://santaclarita.gov/parks-division/wp-content/uploads/sites/19/2023/06/Central-Park-1024x768.jpeg"
-              alt="Scenic view of Central Park in Santa Clarita with open green fields"
-              width="600"
-              style="width:100%; max-width:600px; height:auto; display:block;"
-            >
-          </td>
-        </tr>
+<!-- TWO COLUMN SECTION -->
+<tr>
+<td class="mobile-padding" style="padding:30px;">
+<table width="100%">
+<tr class="stack-column">
 
-       
-        <tr>
-          <td style="padding:25px 30px;">
-            <h2 style="font-family:Arial, sans-serif; color:#333333; margin-top:0;">
-              Event Details
-            </h2>
-            <p style="font-family:Arial, sans-serif; color:#555555; font-size:15px; line-height:1.6;">
-              <strong>Date:</strong> Saturday, April 20, 2026<br>
-              <strong>Time:</strong> 12:00 PM - 4:00 PM<br>
-              <strong>Location:</strong> Central Park, Field #3<br><br>
-              Bring a blanket, snacks, and friends or family!
-            </p>
-          </td>
-        </tr>
+<td width="50%" style="padding-right:10px;">
+<h3>Food & Drinks</h3>
+<p class="mobile-text">Enjoy local vendors, fresh snacks, and cold beverages throughout the afternoon.</p>
+</td>
 
-        
-        <tr>
-          <td align="center" style="padding:30px 0 40px 0;">
+<td width="50%" style="padding-left:10px;">
+<h3>Live Concert</h3>
+<p class="mobile-text">Field #3 features a live band starting at 1PM. Bring your blankets!</p>
+</td>
 
-            
-            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-              <tr>
-                <td align="center" bgcolor="#2e7d32" style="border-radius:8px;">
-                  <a href="#" 
-                     style="display:inline-block; padding:16px 36px; font-family:Arial, sans-serif; font-size:16px; color:#ffffff; text-decoration:none; font-weight:bold;">
-                     RSVP For This Event
-                  </a>
-                </td>
-              </tr>
-            </table>
+</tr>
+</table>
+</td>
+</tr>
 
-          </td>
-        </tr>
+<tr>
+<td style="padding:30px; background:#fafafa;">
+<table width="100%">
+<tr class="stack-column">
 
-      
-        <tr>
-          <td background="https://santaclarita.gov/parks-division/wp-content/uploads/sites/19/2023/06/Central-Park-1024x768.jpeg"
-              bgcolor="#333333"
-              width="600"
-              height="200"
-              valign="middle"
-              style="background-size:cover; background-position:center; text-align:center; padding:40px 20px;">
+<td width="33%" align="center" style="padding:10px;">
+<h4>Family Friendly</h4>
+<p class="mobile-text">Games & kids zone</p>
+</td>
 
-            <div>
-              <h2 style="color:#ffffff; font-family:Arial, sans-serif; margin:0;">
-                Enjoy Nature & Community
-              </h2>
-              <p style="color:#ffffff; font-family:Arial, sans-serif; font-size:14px; margin-top:10px;">
-                Relax outdoors and make lasting memories with friends and family.
-              </p>
-            </div>
+<td width="33%" align="center" style="padding:10px;">
+<h4>Pet Friendly</h4>
+<p class="mobile-text">Leashed pets welcome</p>
+</td>
 
-          </td>
-        </tr>
+<td width="33%" align="center" style="padding:10px;">
+<h4>Free Parking</h4>
+<p class="mobile-text">On-site parking</p>
+</td>
 
-       
-        <tr>
-          <td align="center" style="padding:20px; border-top:1px solid #dddddd;">
-            <p style="font-family:Arial, sans-serif; color:#999999; font-size:12px; margin:5px 0;">
-              You are receiving this email because you signed up for local event reminders.
-            </p>
-            <p style="font-family:Arial, sans-serif; color:#999999; font-size:12px; margin:5px 0;">
-              © 2026 Central Park Event Planning | Unsubscribe
-            </p>
-          </td>
-        </tr>
+</tr>
+</table>
+</td>
+</tr>
 
-      </table>
-     
+<tr>
+<td style="padding:30px;">
 
-    </td>
-  </tr>
+<input type="radio" name="tabs" id="tab1" checked>
+<input type="radio" name="tabs" id="tab2">
+
+<label for="tab1" class="tab-label">Schedule</label>
+<label for="tab2" class="tab-label">Directions</label>
+
+<div class="tab-content content1" style="margin-top:20px;">
+<p>12PM – Picnic Opens<br>1PM – Live Music<br>3PM – Closing Raffle</p>
+</div>
+
+<div class="tab-content content2" style="margin-top:20px;">
+<p>Located at Central Park, Field #3.<br>Enter via Bouquet Canyon Road.</p>
+</div>
+
+</td>
+</tr>
+
+<tr>
+<td style="padding:30px;">
+
+<input type="checkbox" id="toggle-details">
+<label for="toggle-details" style="cursor:pointer; font-weight:bold;">
+Click to See Special Announcement
+</label>
+
+<div class="extra-content">
+<p style="margin-top:15px;">
+🎉 First 100 guests receive free picnic voucher!  
+🎶 Surprise guest performance at 2PM!
+</p>
+</div>
+
+</td>
+</tr>
+
+<tr>
+<td align="center" style="padding:30px;">
+
+<table>
+<tr>
+<td bgcolor="#2e7d32" style="border-radius:8px;">
+<a href="#" class="button"
+style="display:inline-block; padding:16px 36px; color:#ffffff; text-decoration:none; font-weight:bold;">
+RSVP Now
+</a>
+</td>
+</tr>
 </table>
 
+</td>
+</tr>
+
+
+<tr>
+<td class="animated-bg"
+background="https://santaclarita.gov/parks-division/wp-content/uploads/sites/19/2023/06/Central-Park-1024x768.jpeg"
+height="200"
+style="background-size:cover; background-position:left center; text-align:center; padding:40px 20px;">
+
+<h2 style="color:#ffffff;">Enjoy Nature & Community</h2>
+<p style="color:#ffffff;">Relax outdoors.</p>
+
+</td>
+</tr>
+
+<!-- FOOTER -->
+<tr>
+<td align="center" style="padding:20px; font-size:12px; color:#999999;">
+You are receiving this email because you signed up for event reminders.<br>
+© 2026 Central Park Event Planning
+</td>
+</tr>
+
+</table>
+
+</td>
+</tr>
+</table>
 
 </body>
 </html>
